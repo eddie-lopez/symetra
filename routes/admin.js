@@ -18,19 +18,6 @@ router.get('/code', async(req, res, next) => {
 });
 
 /**
- * Retrieves the discount code
- */
-router.get('/code', async(req, res, next) => {
-  try {
-    const results = await Admin.getDiscountCode();
-    res.status(200).json(results);
-  }catch(error){
-    console.log('error: ', error);
-    res.status(500).json({message : error});
-  }
-});
-
-/**
  * Retrieves the transaction report
  */
 router.get('/report', async(req, res, next) => {
